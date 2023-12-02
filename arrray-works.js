@@ -16,3 +16,17 @@ console.log(students[1].toLowerCase())
 console.log(students.length)
 console.log(students.concat(['usama','khan']))
 students.push("Jawad")
+students.pop([1])
+
+
+
+
+
+
+// More Work
+
+
+let txt= prompt("Enter Your Text Here")
+
+
+alert(`Your Total charchter is ${txt.length}, Your Total words is ${txt.split("").length}`)
