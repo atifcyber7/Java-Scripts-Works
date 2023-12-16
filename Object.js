@@ -47,11 +47,11 @@ console.log(attack)
 
 
 
-// for (key in attack){
+ for (key in attack){
 
-//     console.log(`${key} :  : ${attack[key]}`)
+    console.log(`${key} :  : ${attack[key]}`)
 
-// }
+ }
 
 
 
@@ -83,19 +83,19 @@ let patient8 = {p_id : 8 , p_name : "Asif" , age : 93 , dr_name : "jawad",diseas
 let patient = [patient1,patient2,patient3,patient4,patient5,patient6,patient7,patient8]
 
 
-// for (let a=0 ; a< patient.length; a++){
-//     for (key in patient[a])
+for (let a=0 ; a< patient.length; a++){
+    for (key in patient[a])
 
 
-// {
-//     if (key == 'disease'){
-//         if (patient[a][key]=='flu'){
+{
+    if (key == 'disease'){
+        if (patient[a][key]=='flu'){
 
-//             console.log(patient[a]['p_name'])
-//         }
-//     }
-// }
-// }
+            console.log(patient[a]['p_name'])
+        }
+    }
+}
+}
 
 
 
