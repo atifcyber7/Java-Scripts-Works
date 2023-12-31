@@ -40,3 +40,14 @@ var thisMo = currDate.getMonth()+1;
 
 myPlan = new Plan('Advance',99.99,1000,5000,500,[6,12])
 apkaPlan = new Plan('Basic',50.99,100,500,50,[1,6,12])
+
+
+function Last_Name() {
+    if (document.getElementById("Last Name").value.length === 0) {
+        alert("Please Enter Your Last Name");
+        return false;
+        // The alert will be displayed if the last name is not entered.
+    }
+    
+    // This line always returns false, indicating that the form should not be submitted.
+}
