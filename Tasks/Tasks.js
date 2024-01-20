@@ -171,3 +171,106 @@ my_account = new BankAccount ("1234532" , 4000)
 
 my_account.deposit(200);
 my_account.withdraw(300);
+
+
+
+
+
+// Write a JavaScript program that creates a class called 'Shape' with a method
+// to calculate the area. Create two subclasses, 'Circle' and 'Triangle', that inherit
+// from the 'Shape' class and override the area calculation method. Create an
+// instance of the 'Circle' class and calculate its area. Similarly, do the same for the
+// 'Triangle' class.
+
+
+
+
+class shape {
+    constructor(){
+        this.type = "Shape";
+
+    }
+    area (){
+        return 0 ;
+    }
+
+
+
+}
+class circle extends shape {
+        constructor(radius){
+            super();
+            this.type = "circle"
+            this.radius = radius;
+        }
+        area(){
+            return Math.PI * this.radius ** 2 ;
+
+        }
+}
+
+class Triangle extends shape {
+    constructor (base ,height){
+        super ();
+        this.type = "Triangle"
+        this.base = base
+        this.height = height
+
+    }
+    area (){
+        return 0.5 * this.base * this.height;
+    }
+}
+
+
+
+circle_instance = new circle (5)
+console.log(`Area of Circle : ${circle_instance.area().toFixed(2)}`);
+
+triangle_instance = new Triangle (4,6)
+console.log(`Area of the Triangle ${triangle_instance.area().toFixed(2)}`);
+
+
+
+
+// Write a JavaScript program that creates a class called 'Employee' with
+// properties for name and salary. Include a method to calculate annual salary.
+// Create a subclass called 'Manager' that inherits from the 'Employee' class and
+// adds an additional property for department. Override the annual salary
+// calculation method to include bonuses for managers. Create two instances of the
+// 'Manager' class and calculate their annual salary.
+
+
+
+
+class Employee {
+      constructor (name , salary){
+        this.name = name
+        this.salary = salary
+
+
+      }
+      calculate_Annual (){
+        return this.salary * 12;
+      }
+}
+
+class Manager extends Employee{
+    constructor(name , salary , department){
+
+        super (name , salary)
+        this.department = department ; 
+
+    }
+    calculate_Annual (){
+       const bouns =  0.1 * this.salary ;
+        return super.calculate_Annual()+ bouns;
+    }
+}
+
+
+per1 = new Manager ("Nasir Husaain" , 90000 , "Finance ")
+per2 = new Manager ("Atif Zeb" , 200000 , "Security and PT")
+
+console.log(`Name is ${per1.name}  Annual Salary is $${per1.calculate_Annual().toFixed(2)}`);
+console.log(`Name is ${per2.name} Annual Salary is $${per2.calculate_Annual().toFixed(2)}`);
